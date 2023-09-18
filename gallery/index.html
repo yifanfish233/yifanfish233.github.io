@@ -19,18 +19,23 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yifanfish233.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="if (typeof lightGallery !&#x3D;&#x3D; &#39;undefined&#39;) {         var options &#x3D; {             selector: &#39;.gallery-item&#39;         };         lightGallery(document.getElementsByClassName(&#39;.article-gallery&#39;)[0], options">
+    <meta name="description" content=".gallery {     display: flex;     flex-wrap: wrap;   }   .gallery-item {     flex: 0 0 48%;     margin: 1%;     position: relative;     transition: transform 0.3s; &#x2F;* Added transition for smooth zo">
 <meta property="og:type" content="website">
 <meta property="og:title" content="gallery">
 <meta property="og:url" content="https://yifanfish233.github.io/gallery/index.html">
 <meta property="og:site_name" content="Yifan&#39;s Site">
-<meta property="og:description" content="if (typeof lightGallery !&#x3D;&#x3D; &#39;undefined&#39;) {         var options &#x3D; {             selector: &#39;.gallery-item&#39;         };         lightGallery(document.getElementsByClassName(&#39;.article-gallery&#39;)[0], options">
+<meta property="og:description" content=".gallery {     display: flex;     flex-wrap: wrap;   }   .gallery-item {     flex: 0 0 48%;     margin: 1%;     position: relative;     transition: transform 0.3s; &#x2F;* Added transition for smooth zo">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-09-16T23:05:35.000Z">
-<meta property="article:modified_time" content="2023-09-17T06:14:21.085Z">
+<meta property="og:image" content="https://yifanfish233.github.io/images/DSC07779.jpg">
+<meta property="og:image" content="https://yifanfish233.github.io/images/photo2.jpg">
+<meta property="og:image" content="https://yifanfish233.github.io/images/photo3.jpg">
+<meta property="og:image" content="https://yifanfish233.github.io/images/photo4.jpg">
+<meta property="article:published_time" content="2023-09-17T21:00:00.000Z">
+<meta property="article:modified_time" content="2023-09-18T03:01:12.165Z">
 <meta property="article:author" content="Yifan Yu">
 <meta property="article:tag" content="AI">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yifanfish233.github.io/images/DSC07779.jpg">
 
 
 <link rel="canonical" href="https://yifanfish233.github.io/gallery/">
@@ -164,12 +169,46 @@
       
       
       <div class="post-body">
-          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"></div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
-        var options = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script>
+          <style>
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gallery-item {
+    flex: 0 0 48%;
+    margin: 1%;
+    position: relative;
+    transition: transform 0.3s; /* Added transition for smooth zooming effect */
+    overflow: hidden; /* Added to contain the image while zooming */
+    border-radius: 10px; /* Optional: for rounded corners */
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Optional: for rounded corners */
+  }
+  .gallery-item:hover {
+    transform: scale(1.05); /* Added scale transform to enlarge item on hover */
+  }
+</style>
+
+<div class="gallery">
+  <div class="gallery-item">
+    <img src="/images/DSC07779.jpg" alt="Photo 1">
+  </div>
+  <!-- <div class="gallery-item">
+    <img src="/images/photo2.jpg" alt="Photo 2">
+  </div>
+  <div class="gallery-item">
+    <img src="/images/photo3.jpg" alt="Photo 3">
+  </div>
+  <div class="gallery-item">
+    <img src="/images/photo4.jpg" alt="Photo 4">
+  </div> -->
+  <!-- Add more gallery items as necessary -->
+</div>
+
       </div>
       
       
